@@ -87,7 +87,11 @@ li img { display: none; }
 		padding: 		3px;
 		font-size: 	  1.5em;
 		font-weight: normal;
-		justify-content: space-around;
+		-webkit-box-pack: justify;
+	  	-moz-box-pack: justify;
+	  	-ms-flex-pack: justify;
+	  	-webkit-justify-content: space-between;
+	  	justify-content: space-between;
 	}
 
 	nav   { border:   0px; }
