@@ -7,8 +7,7 @@ body, html { font-size: 10px; }
 
 nav {
 	width:100%;
-	height: 5em;
-
+	height: 50px;
 
 	position:fixed;
 	bottom:0;
@@ -51,10 +50,21 @@ li img {display: none;}
 }
 
 @media all and (max-width: 780px) {
-	ul { justify-content:space-around; }
+	ul { 
+		padding: 3px;
+		font-weight: normal;
+		font-size: 1.5em;
+
+		justify-content:space-around;
+	}
+
 	.logo { display: none; }
+
 	li img { display: block;}
+
 }
 
-
+@media all and (max-width: 360px) { 
+	body {font-size: 6px;}
+}
 
