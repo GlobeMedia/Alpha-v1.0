@@ -7,18 +7,22 @@ body, html { font-size: 10px; }
 
 nav {
 	width:100%;
+	height: 5em;
+
+	
 	position:fixed;
 	bottom:0;
 	display:flex;
-	height: 5em;
+	
 
 }
 
 .logo {
-	background-color:black;
-	flex-basis:35%;
-	text-align:center;
 	padding:5px;
+	background-color:black;
+	text-align:center;
+	
+	flex-basis:35%;
 }
 
 .logo img {	width:25em; }
@@ -26,14 +30,15 @@ nav {
 ul{
 	padding:10px;
 	list-style: none;
+	background-color: black;
+	font-size:2.4em;
+	font-family:"bitter";
+	color:white;
+
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	justify-content:center;
-	background-color: black;
-	font-size:2.4em;
-	color:white;
-	flex:1 100%;
-	font-family:"bitter";	
+	flex:1 100%;		
 }
 
 li{	margin-right: 2em;}
@@ -42,10 +47,12 @@ li{	margin-right: 2em;}
 
 
 @media all and (max-width:1100px) {	
-	body {
-		font-size: 8px;
-	}
+	body { font-size: 8px; }
+}
 
+@media all and (max-width: 780px) {
+	ul { justify-content:space-around; }
+	.logo { display: none;}
 }
 
 
