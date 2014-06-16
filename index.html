@@ -5,15 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Globe Media</title>
 	<link rel="stylesheet" href="./stylesheets/navigation/main.css">
-
+	<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 
 
 <nav>
 	<div class="logo"><img src="./images/logo/globe-logo.png"></div>
-	<ul>
-		<li>
+	<ul id="nav_ul">
+		<li class="current_page_item"> <!-- id='current_page_item' ide na onaj <li> koji pokazuje na svoju stranicu -->
 			<figure>
 				<img src="./images/navIcons/news.svg" alt="news" width="30" height="30">
 				<figcaption>NEWS</figcaption>
@@ -42,10 +42,6 @@
 </nav>
 
 
-
-
-
-
-
+<script  src="./scripts/navigation.js"></script>
 </body>
 </html>
