@@ -18,7 +18,7 @@ nav {
 
 .logo {
 	padding:5px;
-	background-color:black;
+	background-color:#262626;
 	text-align:center;
 	
 	flex-basis:35%;
@@ -29,7 +29,7 @@ nav {
 ul{
 	padding:10px;
 	list-style: none;
-	background-color: black;
+	background-color: #262626;
 	font-size:2.4em;
 	font-family:"bitter";
 	color:white;
@@ -60,8 +60,8 @@ li img {display: none;}
 
 	.logo { display: none; }
 
-	li img { display: block;}
 
+	figure img { margin:1px auto 2px auto; display: block;}
 }
 
 @media all and (max-width: 360px) { 
