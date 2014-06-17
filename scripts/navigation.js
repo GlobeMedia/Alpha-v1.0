@@ -20,15 +20,15 @@ function recalibrateMagicLine(){
 	magicLine.width(currentItem.outerWidth())
         	 .css("left", currentItem.position().left)
         	 .css("top" , -3.5)
-        	 .data("origLeft", magicLine.position().left)
-        	 .data("origWidth", magicLine.width());
+        	 .data("origLeft", currentItem.position().left)
+        	 .data("origWidth", currentItem.outerWidth());
 }
 
 
 function makeMagicLine(){
 	$("#nav_ul").append("<li id='magic-line'></li>");
-	magicLine 	 = $("#magic-line");   
-	currentItem  = $(".current_page_item");
+	magicLine 	 = $("#magic-line");  
+	currentItem  = $(".current_page_item"); 
 	recalibrateMagicLine();   
 }
 
@@ -40,6 +40,13 @@ $(document).ready( function() {
    		hoverItem = $(this);
    		hoverMagicLine();
    	},  returnMagicLine);
+   	$("#nav_ul li").click(function() {
+   		console.log($(this))
+   		$(".current_page_item").attr('class', '');
+   		$(this).attr('class', 'current_page_item');
+   		currentItem = $(this);
+   		recalibrateMagicLine();
+   	});
 });
 
 
