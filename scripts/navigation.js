@@ -20,8 +20,8 @@ function recalibrateMagicLine(){
 	magicLine.width(currentItem.outerWidth())
         	 .css("left", currentItem.position().left)
         	 .css("top" , -3.5)
-        	 .data("origLeft", magicLine.position().left)
-        	 .data("origWidth", magicLine.width());
+        	 .data("origLeft", currentItem.position().left)
+        	 .data("origWidth", currentItem.outerWidth());
 }
 
 
@@ -45,8 +45,7 @@ $(document).ready( function() {
    		$(".current_page_item").attr('class', '');
    		$(this).attr('class', 'current_page_item');
    		currentItem = $(this);
-   		magicLine.data("origLeft", magicLine.position().left)
-        	 	 .data("origWidth", magicLine.width());
+   		recalibrateMagicLine();
    	});
 });
 
