@@ -36,13 +36,13 @@ function makeMagicLine(){
 $(document).ready( function() {
 	makeMagicLine();	
 	// on mouse hover, move magicLine
-   	$("#nav_ul li").find("figure").hover( function(){
+   	$("#nav_ul li").find('a').hover( function(){
    		hoverItem = $(this);
    		hoverMagicLine();
    	},  returnMagicLine);
    	$("#nav_ul li").click(function() {
    		console.log($(this))
-   		$(".current_page_item").attr('class', '');
+   		currentItem.attr('class', '');
    		$(this).attr('class', 'current_page_item');
    		currentItem = $(this);
    		recalibrateMagicLine();
