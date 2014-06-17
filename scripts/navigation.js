@@ -27,8 +27,8 @@ function recalibrateMagicLine(){
 
 function makeMagicLine(){
 	$("#nav_ul").append("<li id='magic-line'></li>");
-	magicLine 	 = $("#magic-line");   
-	currentItem  = $(".current_page_item");
+	magicLine 	 = $("#magic-line");  
+	currentItem  = $(".current_page_item"); 
 	recalibrateMagicLine();   
 }
 
@@ -40,6 +40,14 @@ $(document).ready( function() {
    		hoverItem = $(this);
    		hoverMagicLine();
    	},  returnMagicLine);
+   	$("#nav_ul li").click(function() {
+   		console.log($(this))
+   		$(".current_page_item").attr('class', '');
+   		$(this).attr('class', 'current_page_item');
+   		currentItem = $(this);
+   		magicLine.data("origLeft", magicLine.position().left)
+        	 	 .data("origWidth", magicLine.width());
+   	});
 });
 
 
